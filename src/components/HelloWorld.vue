@@ -55,24 +55,4 @@ li {
 a {
   color: #42b983;
 }
-<<<<<<< HEAD
-=======
-.cover {
-  height: 100vh;
-  width: 100%
-}
-
-.cover .cover__logo {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-  margin: -14vw 0 0;
-  /*width: 15.7vw;
-    height: 2.3236vw;*/
-  color: #fff;
-  z-index: 4;
-  transition: color .3s ease
-}
->>>>>>> c8ffce6 (+mp4 and +lfs)
 </style>
