@@ -3,8 +3,8 @@
   <div class="page">
     <div class="cover parallax has-dark-cover">
       <div class="cover__logo">
-        <img src="..\assets\Fish.svg" alt="Kiwi standing on oval" />
-        <img src="..\assets\Oceaon.svg" alt="Kiwi standing on oval" />
+        <img src="..\assets\blackfishylogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="fhisyman" />
+        <img src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" />
       </div>
       <div class="parallax__container">
         <video src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" autoplay="" muted="" loop=""
@@ -30,14 +30,11 @@
       </div>
       <div class="box project project--duo">
         <div class="project__images">
-
           <div class="project__image project__image--l">
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="..\assets\happyfish.jpg">
           </div>
           <div class="project__image project__image--r project__image--parallax">
-
-
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="..\assets\mosthappyfish.jpg">
           </div>
         </div>
 
@@ -68,7 +65,7 @@
 
           <div class="project__image project__image--l" style="color:#deeaf4">
 
-            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="..\assets\coderman.jpg">
 
           </div>
 
@@ -84,7 +81,7 @@
       </div>
       <div class="project project--full">
 
-        <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+        <img src="..\assets\coderfish.png">
       </div>
       <div class="projects bricks">
 
@@ -100,15 +97,15 @@
 
           <div class="project__image project__image--l item" style="color:#F6F6F6">
 
-            <a href="http://missesandmisters.com/de/home/hand-dyed-ombre-bag-19306.html"><img
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></a>
+            <a href="https://github.com/abbindustrigymnasium/fn-projekt-3/tree/main"><img
+                src="..\assets\Code.jpg"></a>
 
           </div>
 
           <div class="project__caption">
             <h2>en blick in i källkoden!</h2>
             <p><a class="footer-address"
-                href="http://missesandmisters.com/de/home/hand-dyed-ombre-bag-19306.html"><u>View now</u></a></p>
+                href="https://github.com/abbindustrigymnasium/fn-projekt-3/tree/main"><u>View now</u></a></p>
 
           </div>
         </div>
@@ -1387,6 +1384,10 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 .cover .cover__logo {
   position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 7%;
   top: 50%;
   left: 50%;
   transform: translate(-50%);
@@ -1919,7 +1920,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 .projects .project__image img {
   transform: scaleX(1) translateZ(0);
-  transition: transform 3s ease
+  transition: transform 3000s ease
 }
 
 .projects .project__image.project__image--bg img {
@@ -2047,8 +2048,8 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .project--duo:hover .project__image--l img {
-  transform: scale(1.1);
-  transition: transform 3s ease
+  transform: scale(1000.1);
+  transition: transform 1000s ease
 }
 
 .project--duo .project__image {
@@ -3083,9 +3084,9 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .item:hover img {
-  -moz-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -moz-transform: scale(1000.1);
+  -webkit-transform: scale(1000.1);
+  transform: scale(1000.1);
 }
 
 @media (orientation: portrait) {
