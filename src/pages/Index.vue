@@ -135,13 +135,14 @@
   </div> <!--  .page -->
 </div> <!--  #js-view -->
 
-<div class="home-footer">
-
-
-
-  <div class="footer-address" style="text-align:center; font-size:16px;">
-    <p><a href="http://www.save-the-ocean.com/www.missesandmisters.com">bpiasdno </a> <a
-        href="mailto:hi@missesandmisters.com">cool@kaimsd.gmail.com.hmail.hotmail</a> </p>
+<div class="footer">
+  <p> -  Årkrus 2 Spets Grupp 3 bla bla  - </p>
+  <div class="footerlink">
+    <a class="hoverlinkfooter" href="https://twitter.com/BarackObama"> https://twitter.com/BarackObama </a>
+    <a class="hoverlinkfooter" href="MyBestAndFavouriteEmail@EmialServiceHotmail.com"> MyBestAndFavouriteEmail@EmialServiceHotmail.com </a>
+    <a class="hoverlinkfooter" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> https://www.youtube.com/watch?v=dQw4w9WgXcQ </a>
+    <a class="hoverlinkfooter" href="https://nokflex.nok.se/"> https://nokflex.nok.se/ </a>
+    <a class="hoverlinkfooter" href="https://github.com/abbjetmus/FN-projekt"> https://github.com/abbjetmus/FN-projekt </a>
   </div>
 </div>
 </template>
@@ -163,6 +164,30 @@ html {
 :after,
 :before {
   box-sizing: inherit
+}
+.footer {
+  position: relative;
+  font-size: 45px;
+  z-index: 100;
+  color: black;
+  background-color: rgba(255, 255, 255, .45);
+  font-weight: 1000;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.footerlink {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: #D3D3D3;
+}
+.hoverlinkfooter:hover {
+  color: #0000EE;
+  text-decoration: underline;
+  transform: scaleX(1.1) scaleY(1.1);
 }
 
 html {
@@ -1557,206 +1582,9 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
   margin: 1em 0
 }
 
-.footer-mailchimp {
-  width: 23.6096vw;
-  height: 2.7776vw;
-  position: relative
-}
-
-.footer-mailchimp .mailchimp.sending .input {
-  background-color: #fff !important;
-  color: #000
-}
-
-.footer-mailchimp .mailchimp.sending button {
-  background: #fff;
-  color: #000
-}
-
-.footer-mailchimp .input {
-  width: 23.6096vw;
-  height: 2.7776vw;
-  font-size: .83328vw;
-  border: 1px solid #fff;
-  color: #fff;
-  margin: 0;
-  padding: 0 6.2496vw 0 12px;
-  letter-spacing: .1em;
-  text-align: left;
-  transition: background .5s, color .5s;
-  border-radius: 0;
-  background-color: transparent !important
-}
-
-.footer-mailchimp .input:focus {
-  outline: none
-}
-
-.footer-mailchimp button {
-  color: #fff;
-  width: 5.5552vw;
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: .83328vw;
-  border: 1px solid #fff;
-  margin: 0;
-  height: 2.7776vw;
-  text-align: center;
-  cursor: pointer;
-  transition: background .3s, color .3s;
-  letter-spacing: .1em
-}
-
-.footer-mailchimp button:hover {
-  background: #fff;
-  color: #000
-}
-
-@media screen and (max-width:767px) {
-  .footer-mailchimp {
-    display: none
-  }
-}
-
 .home-footer {
   padding: 1.3888vw 16vw;
   font-family: garamond-premier-pro-display, serif;
-  background: #000;
-  color: #fff;
-  line-height: 1;
-  letter-spacing: .08em;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-pack: justify;
-  justify-content: space-between
-}
-
-@media screen and (max-width:767px) {
-  .home-footer {
-    padding: 10px 20px
-  }
-}
-
-.home-footer .footer-socials a {
-  position: relative;
-  display: inline-block;
-  width: 2.63872vw;
-  height: 2.63872vw;
-  border-radius: 50%;
-  margin: 0 .3472vw;
-  transition: color .3s, background .3s, border .3s
-}
-
-.home-footer .footer-socials a .icon {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity .3s
-}
-
-.home-footer .footer-socials a .icon.icon--rollover,
-.home-footer .footer-socials a:hover .icon {
-  opacity: 0
-}
-
-.home-footer .footer-socials a:hover .icon.icon--rollover {
-  opacity: 1
-}
-
-@media screen and (max-width:767px) {
-  .home-footer .footer-socials {
-    display: none
-  }
-}
-
-.home-footer .footer-nav {
-  display: inline-block;
-  vertical-align: middle
-}
-
-@media screen and (max-width:767px) {
-  .home-footer .footer-nav {
-    display: none
-  }
-}
-
-.home-footer .footer-address {
-  display: inline-block;
-  width: 100%;
-
-  font-size: .83328vw
-}
-
-@media screen and (max-width:767px) {
-  .home-footer .footer-address {
-    float: none;
-    font-size: 10px;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 100%
-  }
-}
-
-.home-footer .footer-address a {
-  display: inline-block;
-  vertical-align: middle;
-  font-size: .83328vw;
-  position: relative;
-  color: #fff;
-  padding: 0 0 0 1.2em;
-  line-height: 1.4;
-
-}
-
-@media screen and (max-width:767px) {
-  .home-footer .footer-address a {
-    margin: 2em 0;
-    font-size: 9px;
-    display: inline-block
-  }
-}
-
-.home-footer .footer-address a:first-child {
-  padding-left: 0
-}
-
-.home-footer .footer-address a:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #fff;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .31s cubic-bezier(.165, .84, .44, 1)
-}
-
-.home-footer .footer-address a:hover:after {
-  transform: scaleX(1);
-  transition: transform .51s cubic-bezier(.165, .84, .44, 1)
-}
-
-.home-footer .copy {
-  display: inline-block;
-  vertical-align: middle;
-  margin: 2.2em 0;
-  float: right;
-  font-size: .83328vw
-}
-
-@media screen and (max-width:767px) {
-  .home-footer .copy {
-    display: block;
-    font-size: 10px;
-    float: none
-  }
 }
 
 .is-home .arrow--left {
