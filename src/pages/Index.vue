@@ -3,8 +3,8 @@
   <div class="page">
     <div class="cover parallax has-dark-cover">
       <div class="cover__logo">
-        <img src="..\assets\blackfishylogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="fhisyman" />
-        <img src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" />
+        <router-link to="/Fish"><img class="SelectSvg" href="" src="..\assets\blackfishylogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="fhisyman" /></router-link>
+        <router-link to="/Oceon"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" /></router-link>
       </div>
       <div class="parallax__container">
         <video src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" autoplay="" muted="" loop=""
@@ -274,6 +274,12 @@ img {
 
 svg:not(:root) {
   overflow: hidden
+}
+.SelectSvg:hover{
+  transition-duration: 0.25s;
+  transform: scaleX(1.075) scaleY(1.075);
+  filter: invert(100%);
+  cursor: pointer;
 }
 
 code,
