@@ -1,10 +1,10 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <div
-      style="height: 15vh; width: 100%; z-index: 100"
+      style="height: 8vh; width: 100%; z-index: 100"
       class="navBackdrop"
     ></div>
-    <q-header elevated class="bg-transparent text-white z-max fixed navBar">
+    <q-header elevated class="bg-transparent text-white z-max fixed navBar" style="height: 0;">
       <q-toolbar>
         <div class="col">
           <q-btn
@@ -26,7 +26,7 @@
           <input
             type="text"
             class="bg-transparent navSearch"
-            placeholder="search..."
+            placeholder="  search . . ."
           />
         </div>
       </q-toolbar>
@@ -106,9 +106,9 @@ export default defineComponent({
   background: rgb(17, 24, 39);
   background: linear-gradient(
     180deg,
-    rgba(17, 24, 39, 0.5) 0%,
-    rgba(16, 24, 39, 0.3) 25%,
-    rgba(17, 24, 39, 0.15) 50%,
+    rgba(17, 24, 39, 0.8) 0%,
+    rgba(16, 24, 39, 0.6) 25%,
+    rgba(17, 24, 39, 0.3) 50%,
     rgba(252, 255, 255, 0) 100%
   );
 }
@@ -163,15 +163,15 @@ input {
   /* box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5); */
 }
 ::-webkit-input-placeholder {
-  color: #666;
+  color: #fff;
 }
 :-moz-placeholder {
-  color: #666;
+  color: #fff;
 }
 ::-moz-placeholder {
-  color: #666;
+  color: #fff;
 }
 :-ms-input-placeholder {
-  color: #666;
+  color: #fff;
 }
 </style>
