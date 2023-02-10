@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <div
-      style="height: 8vh; width: 100%; z-index: 100"
+      style="height: 7vh; width: 100%; z-index: 100"
       class="navBackdrop"
     ></div>
     <q-header elevated class="bg-transparent text-white z-max fixed navBar" style="height: 0;">
@@ -22,12 +22,14 @@
           Ocean Data Project
         </q-toolbar-title>
 
-        <div class="col text-right column">
-          <input
+        <div class="loginSignup col text-right column">
+          <!-- <input
             type="text"
             class="bg-transparent navSearch"
             placeholder="  search . . ."
-          />
+          /> -->
+          <router-link to="/login" class="loginButton" tag="button"  target="_blank">Log In</router-link>
+          <router-link to="/signup" class="signupButton" tag="button"  target="_blank">Sign up</router-link>
         </div>
       </q-toolbar>
     </q-header>
@@ -107,8 +109,7 @@ export default defineComponent({
   background: linear-gradient(
     180deg,
     rgba(17, 24, 39, 0.8) 0%,
-    rgba(16, 24, 39, 0.6) 25%,
-    rgba(17, 24, 39, 0.3) 50%,
+    rgba(16, 24, 39, 0.3) 70%,
     rgba(252, 255, 255, 0) 100%
   );
 }
@@ -174,4 +175,32 @@ input {
 :-ms-input-placeholder {
   color: #fff;
 }
+
+.loginSignup {
+  padding: 1rem;
+  display: inline;
+  text-transform: uppercase;
+  font-weight:normal;
+  
+}
+
+.loginSignup .loginButton {
+  color: #00e2b9;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+}
+
+.loginSignup .signupButton {
+  color: white;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+}
+
+
 </style>

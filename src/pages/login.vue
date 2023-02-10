@@ -45,10 +45,6 @@ import { computed } from "vue";
 
 export default {
   name: "login",
-
-//   components: {
-//     loginForm: loginForm
-//   }
 }
   // name: "LoginPage",
 
