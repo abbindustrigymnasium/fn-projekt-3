@@ -77,16 +77,6 @@ export default {
   height: 100vh;
 }
 
-.titleHeader {
-  color: white;
-  z-index: 5;
-  display: block;
-  /* justify-content: center; */
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
-}
 .main-page {
   height: 100vh;
   width: 100%;
@@ -97,14 +87,6 @@ export default {
   width: 100%;
   background: linear-gradient(rgb(35, 35, 45), rgb(55, 55, 60));
   position: relative;
-}
-
-#header-image {
-  background-image: url("https://s27363.pcdn.co/wp-content/uploads/2020/05/Santorini-Sunset.jpg.optimal.jpg");
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  position: fixed;
 }
 .overlay {
   position: absolute;
