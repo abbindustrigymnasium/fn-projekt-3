@@ -7,28 +7,27 @@
         </video>
 
         <div class="login-box">
-          <h2>Login</h2>
+          <h2>Sign up</h2>
           <form>
             <div class="user-box">
               <input type="text" name="" required="">
               <label>Username</label>
             </div>
             <div class="user-box">
+              <input type="text" name="" required="">
+              <label>email</label>
+            </div>
+            <div class="user-box">
               <input type="password" name="" required="">
               <label>Password</label>
             </div>
-            <div class="buttonRow">
-              <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-              </a>
-              <button class="noAccountButton">
-                Don't have an account?
-              </button>
-            </div>
+            <a href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              Submit
+            </a>
           </form>
         </div>
     </section>
@@ -44,7 +43,7 @@ import { computed } from "vue";
 // app.component('loginForm', loginForm)
 
 export default {
-  name: "login",
+  name: "signup",
 
 //   components: {
 //     loginForm: loginForm
@@ -133,10 +132,6 @@ export default {
     width: auto;
     height: 100%;
   }
-
-  .login-box {
-    width: 90vw;
-  }
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
@@ -158,15 +153,12 @@ export default {
   height: 100%;
   }
 
-  .login-box {
-    width: 400px;
-  }
-
 }
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 400px;
   padding: 4vh;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -180,6 +172,7 @@ export default {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
+  font-size: 36px;
   text-align: center;
 }
 
@@ -201,10 +194,10 @@ export default {
 .login-box .user-box label {
   position: absolute;
   top:0;
-  left: 0;
+  left: 0.5rem;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff97;
   pointer-events: none;
   transition: .5s;
 }
@@ -217,32 +210,21 @@ export default {
   font-size: 12px;
 }
 
-.login-box form a, 
-.login-box form button {
+.login-box form a {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
   color: #00e2b9;
+  font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   transition: .5s;
   margin-top: 40px;
-}
-
-.login-box form a {
-  font-size: 16px;
-  text-transform: uppercase;
   letter-spacing: 4px
 }
 
-.login-box form button {
-  font-size: 11px;
-  text-align: right;
-}
-
-.login-box a:hover,
-.login-box button:hover {
+.login-box a:hover {
   background: #00e2b9;
   color: #000;
   border-radius: 5px;
@@ -252,13 +234,12 @@ export default {
               0 0 100px #00ba98d1;
 }
 
-.login-box a span, 
-.login-box button span {
+.login-box a span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1)  {
+.login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -333,16 +314,4 @@ export default {
   }
 }
 
-.noAccountButton {
-  padding: 1rem;
-  border: none;
-  background: none;
-}
-
-.buttonRow {
-  
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
 </style>
