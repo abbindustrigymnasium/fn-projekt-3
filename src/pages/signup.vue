@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center" style="width: 100%;">
     <section id="header" style="width: 100%; top: 0; ">
       <div class="overlay"></div>
         <video poster="oceanVideo.mp4" autoplay loop muted>
@@ -76,16 +76,6 @@ export default {
   height: 100vh;
 }
 
-.titleHeader {
-  color: white;
-  z-index: 5;
-  display: block;
-  /* justify-content: center; */
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
-}
 .main-page {
   height: 100vh;
   width: 100%;
@@ -98,13 +88,6 @@ export default {
   position: relative;
 }
 
-#header-image {
-  background-image: url("https://s27363.pcdn.co/wp-content/uploads/2020/05/Santorini-Sunset.jpg.optimal.jpg");
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  position: fixed;
-}
 .overlay {
   position: absolute;
   top: 0;
@@ -132,6 +115,19 @@ export default {
     width: auto;
     height: 100%;
   }
+
+
+  .login-box {
+    width: 90vw;
+  }
+
+  .login-box form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
@@ -153,12 +149,15 @@ export default {
   height: 100%;
   }
 
+  .login-box {
+  width: 400px;
+  }
+
 }
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
   padding: 4vh;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -214,6 +213,8 @@ export default {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
+  width: 100%;
+  text-align: center;
   color: #00e2b9;
   font-size: 16px;
   text-decoration: none;

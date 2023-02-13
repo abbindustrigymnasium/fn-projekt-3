@@ -18,16 +18,16 @@
               <label>Password</label>
             </div>
             <div class="buttonRow">
-              <a href="#">
+              <button href="#">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Submit
-              </a>
-              <button class="noAccountButton">
-                Don't have an account?
               </button>
+              <a href="#/signup" class="noAccountButton">
+                Don't have an account?
+              </a>
             </div>
           </form>
         </div>
@@ -45,10 +45,6 @@ import { computed } from "vue";
 
 export default {
   name: "login",
-
-//   components: {
-//     loginForm: loginForm
-//   }
 }
   // name: "LoginPage",
 
@@ -77,16 +73,6 @@ export default {
   height: 100vh;
 }
 
-.titleHeader {
-  color: white;
-  z-index: 5;
-  display: block;
-  /* justify-content: center; */
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
-}
 .main-page {
   height: 100vh;
   width: 100%;
@@ -97,14 +83,6 @@ export default {
   width: 100%;
   background: linear-gradient(rgb(35, 35, 45), rgb(55, 55, 60));
   position: relative;
-}
-
-#header-image {
-  background-image: url("https://s27363.pcdn.co/wp-content/uploads/2020/05/Santorini-Sunset.jpg.optimal.jpg");
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  position: fixed;
 }
 .overlay {
   position: absolute;
@@ -136,6 +114,18 @@ export default {
 
   .login-box {
     width: 90vw;
+  }
+
+  .login-box form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
+
+  .login-box form a {
+    font-size: 6px;
   }
 }
 @media screen and (min-aspect-ratio: 3/4) {
@@ -180,6 +170,7 @@ export default {
   margin: 0 0 30px;
   padding: 0;
   color: #fff;
+  font-size: 36px;
   text-align: center;
 }
 
@@ -204,7 +195,7 @@ export default {
   left: 0;
   padding: 10px 0;
   font-size: 16px;
-  color: #fff;
+  color: #ffffff97;
   pointer-events: none;
   transition: .5s;
 }
@@ -228,17 +219,23 @@ export default {
   overflow: hidden;
   transition: .5s;
   margin-top: 40px;
-}
 
-.login-box form a {
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 4px
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  
 }
 
 .login-box form button {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
+
+.login-box form a {
   font-size: 11px;
-  text-align: right;
 }
 
 .login-box a:hover,
@@ -258,7 +255,7 @@ export default {
   display: block;
 }
 
-.login-box a span:nth-child(1)  {
+.login-box button span:nth-child(1)  {
   top: 0;
   left: -100%;
   width: 100%;
@@ -276,7 +273,7 @@ export default {
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -295,7 +292,7 @@ export default {
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -314,7 +311,7 @@ export default {
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;
@@ -337,10 +334,10 @@ export default {
   padding: 1rem;
   border: none;
   background: none;
+  
 }
 
 .buttonRow {
-  
   display: flex;
   justify-content: space-between;
   width: 100%;
