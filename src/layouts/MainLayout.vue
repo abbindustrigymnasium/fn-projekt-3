@@ -32,7 +32,7 @@
           <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
         </div>
       </q-toolbar>
-    </q-header> -->
+    </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-9 text-white EL">
        <div class="col text-center">

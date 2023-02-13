@@ -3,11 +3,11 @@
     <section id="header" style="width: 100%; top: 0; ">
       <div class="overlay"></div>
         <video poster="oceanVideo.mp4" autoplay loop muted>
-          <source type="video/mp4" src="oceanVideo.mp4" />
+          <source type="video/mp4" src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" />
         </video>
 
         <div class="login-box">
-          <h2>Login</h2>
+          <h2> L O G I N </h2>
           <form>
             <div class="user-box">
               <input type="text" name="" required="">
@@ -18,14 +18,14 @@
               <label>Password</label>
             </div>
             <div class="buttonRow">
-              <button href="#">
+              <button href="#" class="submitButton">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
                 Submit
               </button>
-              <a href="#/signup" class="noAccountButton">
+              <a href="#/signup" id="noAccountButton">
                 Don't have an account?
               </a>
             </div>
@@ -57,7 +57,6 @@ export default {
 </script>
 
 <style>
-
 #header video {
   position: absolute;
   /* top: -31vh; */
@@ -123,10 +122,6 @@ export default {
   background: none;
   border: none;
 }
-
-  .login-box form a {
-    font-size: 6px;
-  }
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
@@ -159,9 +154,9 @@ export default {
   left: 50%;
   padding: 4vh;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.95);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.9);
   border-radius: 10px;
   z-index: 10;
 }
@@ -181,7 +176,6 @@ export default {
 .login-box .user-box input {
   width: 100%;
   padding: 10px 0;
-  font-size: 16px;
   color: #fff;
   margin-bottom: 30px;
   border: none;
@@ -194,7 +188,6 @@ export default {
   top:0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
   color: #ffffff97;
   pointer-events: none;
   transition: .5s;
@@ -208,7 +201,6 @@ export default {
   font-size: 12px;
 }
 
-.login-box form a, 
 .login-box form button {
   position: relative;
   display: inline-block;
@@ -222,23 +214,19 @@ export default {
 
   display: flex;
   align-items:center;
-  justify-content:center;
-  
+  justify-content:center;  
 }
 
-.login-box form button {
-  font-size: 16px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  background: none;
-  border: none;
+#noAccountButton:hover {
+  background: #00e2b9;
+  color: #000;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #00ba98d1,
+    0 0 5px #00ba98d1,
+    0 0 25px #00ba98d1,
+    0 0 50px #00ba98d1;
 }
 
-.login-box form a {
-  font-size: 11px;
-}
-
-.login-box a:hover,
 .login-box button:hover {
   background: #00e2b9;
   color: #000;
@@ -261,7 +249,7 @@ export default {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #00e2b9);
-  animation: btn-anim1 1s linear infinite;
+  animation: btn-anim1 2s linear infinite;
 }
 
 @keyframes btn-anim1 {
@@ -279,8 +267,8 @@ export default {
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg, transparent, #00e2b9);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: 0.5s;
 }
 
 @keyframes btn-anim2 {
@@ -298,8 +286,8 @@ export default {
   width: 100%;
   height: 2px;
   background: linear-gradient(270deg, transparent, #00e2b9);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s
 }
 
 @keyframes btn-anim3 {
@@ -317,8 +305,8 @@ export default {
   width: 2px;
   height: 100%;
   background: linear-gradient(360deg, transparent, #00e2b9);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s
 }
 
 @keyframes btn-anim4 {
@@ -330,16 +318,40 @@ export default {
   }
 }
 
-.noAccountButton {
-  padding: 1rem;
+#noAccountButton {
   border: none;
   background: none;
-  
+
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  color: rgba(0, 216, 175, 0.65);
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
 }
 
 .buttonRow {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: column;
 }
 </style>
