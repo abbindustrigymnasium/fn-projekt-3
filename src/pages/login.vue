@@ -10,15 +10,15 @@
           <h2>Login</h2>
           <form>
             <div class="user-box">
-              <input type="text" name="" required="">
-              <label>Username</label>
+              <input type="text" v-model="email">
+              <label>Email</label>
             </div>
             <div class="user-box">
-              <input type="password" name="" required="">
+              <input type="password" v-model="password">
               <label>Password</label>
             </div>
             <div class="buttonRow">
-              <a href="#">
+              <a @click="findUser" class="cursor-pointer">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -35,33 +35,35 @@
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-import { useQuasar } from "quasar";
-import { computed } from "vue";
-// import loginForm from ".components/loginForm.vue";
+<script setup>
+import axios from 'axios'
+import { ref } from 'vue'
+const email = ref("")
+const password = ref("")
 
-// app.component('loginForm', loginForm)
 
-export default {
-  name: "login",
+const findUser = async () => {
+  try {
+    const api = await axios.post('http://localhost:3000/auth', { email: email.value, password: password.value })
+    console.log(api.data)
 
-//   components: {
-//     loginForm: loginForm
-//   }
+    localStorage.setItem('user', JSON.stringify({
+      name: api.data.name,
+      email: api.data.email,
+      password: api.data.password,
+      id: api.data.id
+    }));
+    console.log("user saved to local storage")
+
+  } catch (error) {
+    console.log(error.message)
+  }
+  email.value = ""
+  password.value = ""
 }
-  // name: "LoginPage",
-
-  // const $q = useQuasar()
-  // const buttonColor = computed(() => {
-  //   return $q.screen.lt.sm ? "secondary" : "primary";
-  // });
-
-  // return { buttonColor };
 </script>
 
 <style>
-
 #header video {
   position: absolute;
   /* top: -31vh; */
@@ -85,7 +87,7 @@ export default {
   position: absolute;
   width: 100%;
   text-align: center;
-  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
+  background-image: url("C: \Users\21lucbih\Desktop\MainFish\fn-projekt-3\public\logosfishoceon.png");
 }
 .main-page {
   height: 100vh;
@@ -217,7 +219,7 @@ export default {
   font-size: 12px;
 }
 
-.login-box form a, 
+.login-box form a,
 .login-box form button {
   position: relative;
   display: inline-block;
@@ -252,7 +254,7 @@ export default {
               0 0 100px #00ba98d1;
 }
 
-.login-box a span, 
+.login-box a span,
 .login-box button span {
   position: absolute;
   display: block;
@@ -340,7 +342,7 @@ export default {
 }
 
 .buttonRow {
-  
+
   display: flex;
   justify-content: space-between;
   width: 100%;

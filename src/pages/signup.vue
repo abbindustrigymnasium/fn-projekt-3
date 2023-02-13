@@ -10,18 +10,18 @@
           <h2>Sign up</h2>
           <form>
             <div class="user-box">
-              <input type="text" name="" required="">
-              <label>Username</label>
+              <input type="text" v-model="name">
+              <label>Name</label>
             </div>
             <div class="user-box">
-              <input type="text" name="" required="">
-              <label>email</label>
+              <input type="text" v-model="email">
+              <label>Email</label>
             </div>
             <div class="user-box">
-              <input type="password" name="" required="">
+              <input type="password" v-model="password">
               <label>Password</label>
             </div>
-            <a href="#">
+            <a @click="addUser" class="cursor-pointer">
               <span></span>
               <span></span>
               <span></span>
@@ -34,33 +34,31 @@
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from "vue";
-import { useQuasar } from "quasar";
-import { computed } from "vue";
-// import loginForm from ".components/loginForm.vue";
+<script setup>
+import axios from 'axios'
+import { ref } from 'vue';
 
-// app.component('loginForm', loginForm)
+const name = ref("")
+const email = ref("")
+const password = ref("")
 
-export default {
-  name: "signup",
+const addUser = async () => {
+  try {
+    const response = await axios.post('http://localhost:3000/users', { name: name.value, email: email.value, password: password.value })
+    console.log(response.data)
+  } catch (error) {
+    console.error(error.response.status)
+    console.log("Failed to create user")
+  }
+  name.value = ""
+  email.value = ""
+  password.value = ""
 
-//   components: {
-//     loginForm: loginForm
-//   }
 }
-  // name: "LoginPage",
 
-  // const $q = useQuasar()
-  // const buttonColor = computed(() => {
-  //   return $q.screen.lt.sm ? "secondary" : "primary";
-  // });
-
-  // return { buttonColor };
 </script>
 
 <style>
-
 #header video {
   position: absolute;
   /* top: -31vh; */
@@ -84,7 +82,7 @@ export default {
   position: absolute;
   width: 100%;
   text-align: center;
-  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
+  background-image: url("C: \Users\21lucbih\Desktop\MainFish\fn-projekt-3\public\logosfishoceon.png");
 }
 .main-page {
   height: 100vh;
@@ -313,5 +311,4 @@ export default {
     bottom: 100%;
   }
 }
-
 </style>
