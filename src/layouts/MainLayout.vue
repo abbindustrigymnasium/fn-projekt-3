@@ -34,17 +34,22 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-below bordered style="background: #2f415b; color:white;">
+    <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-9 text-white EL">
+       <div class="col text-center">
+          <router-link to="/" class="headHome" tag="button">Ocean Data Project</router-link>
+        </div>
+      
       <q-list>
-        <q-item-label header
-          ><div style="height: 3vh; width: 100%"></div
-        ></q-item-label>
+
+        <!-- <q-item-label header
+          ><div style="height: 2vh; width: 100%"></div
+        ></q-item-label> -->
 
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
-          style=""
+          style="height: 4rem; width: 100%; border-bottom: 1.5px solid rgba(255,255,255,0.4);"
         />
         <div class="EL_loginSignup col column">
           <!-- <input
@@ -184,15 +189,15 @@ input {
 :-ms-input-placeholder {
   color: #fff;
 }
-
+.EL_loginSignup,
 .loginSignup {
   padding: 1rem;
-  display: inline;
+  display: inline-block;
   text-transform: uppercase;
   font-weight:normal;
-  
 }
 
+.EL_loginSignup .loginButton,
 .loginSignup .loginButton {
   color: #00e2b9;
   padding-inline: 1rem;
@@ -202,7 +207,7 @@ input {
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
   transition: 400ms;
 }
-
+.EL_loginSignup .loginButton:hover,
 .loginSignup .loginButton:hover {
   background-color: #00e2b9;
   color: #000;
@@ -213,7 +218,7 @@ input {
   
 }
 
-
+.EL_loginSignup .signupButton,
 .loginSignup .signupButton {
   color: #fff;
   padding-inline: 1rem;
@@ -225,6 +230,7 @@ input {
   margin-left: 1rem;
 }
 
+.EL_loginSignup .signupButton:hover,
 .loginSignup .signupButton:hover {
   color: #ffa442;
   text-shadow: 0 0 2px #c46f00d1,
@@ -247,7 +253,7 @@ input {
 
 .headHome {
   font-size: 16px;
-  text-align: right;
+  text-align: left;
 }
 
 .navBar {
@@ -256,59 +262,10 @@ input {
  
 }
 
-.EL_loginSignup {
-  display: none;
+.EL .headHome {
+  margin-top: 4rem;
 }
 
 }
-
-.EL_loginSignup {
-  padding: 1rem;
-  display: inline;
-  text-transform: uppercase;
-  font-weight:normal;
-  outline: solid 2px white;
-}
-
-.EL_loginSignup .loginButton {
-  color: #00e2b9;
-  padding-inline: 1rem;
-  padding-block: 0.6rem;
-  text-decoration: none;
-  border-radius: 0.25rem;
-  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
-  transition: 400ms;
-}
-
-.EL_loginSignup .loginButton:hover {
-  background-color: #00e2b9;
-  color: #000;
-  box-shadow: 0 0 2px #00ba98d1,
-              0 0 10px #00ba98d1,
-              0 0 25px #00ba98d1,
-              0 0 50px #00ba98d1;
-  
-}
-
-
-.EL_loginSignup .signupButton {
-  color: #fff;
-  padding-inline: 1rem;
-  padding-block: 0.6rem;
-  text-decoration: none;
-  border-radius: 0.25rem;
-  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
-  transition: 400ms;
-  margin-left: 1rem;
-}
-
-.EL_loginSignup .signupButton:hover {
-  color: #ffa442;
-  text-shadow: 0 0 2px #c46f00d1,
-              0 0 10px #c46f00d1,
-              0 0 25px #c46f00d1,
-              0 0 50px #c46f00d1;
-}
-
 
 </style>
