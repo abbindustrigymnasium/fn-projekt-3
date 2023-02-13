@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center" style="width: 100%;">
     <section id="header" style="width: 100%; top: 0; ">
       <div class="overlay"></div>
         <video poster="oceanVideo.mp4" autoplay loop muted>
@@ -21,13 +21,13 @@
               <input type="password" name="" required="">
               <label>Password</label>
             </div>
-            <button href="#">
+            <a href="#">
               <span></span>
               <span></span>
               <span></span>
               <span></span>
               Submit
-            </button>
+            </a>
           </form>
         </div>
     </section>
@@ -76,6 +76,16 @@ export default {
   height: 100vh;
 }
 
+.titleHeader {
+  color: white;
+  z-index: 5;
+  display: block;
+  /* justify-content: center; */
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  background-image: url("C:\Development\Quasar\FN-Projekt\testing\testing\public\logosfishoceon.png");
+}
 .main-page {
   height: 100vh;
   width: 100%;
@@ -88,6 +98,13 @@ export default {
   position: relative;
 }
 
+#header-image {
+  background-image: url("https://s27363.pcdn.co/wp-content/uploads/2020/05/Santorini-Sunset.jpg.optimal.jpg");
+  width: 100vw;
+  min-height: 100vh;
+  background-size: cover;
+  position: fixed;
+}
 .overlay {
   position: absolute;
   top: 0;
@@ -115,6 +132,19 @@ export default {
     width: auto;
     height: 100%;
   }
+
+
+  .login-box {
+    width: 90vw;
+  }
+
+  .login-box form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
@@ -136,12 +166,15 @@ export default {
   height: 100%;
   }
 
+  .login-box {
+  width: 400px;
+  }
+
 }
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
   padding: 4vh;
   transform: translate(-50%, -50%);
   background: rgba(0,0,0,.5);
@@ -193,12 +226,12 @@ export default {
   font-size: 12px;
 }
 
-.login-box form button {
+.login-box form a {
   position: relative;
-  background: none;
-  border: none;
-  /* display: inline-block; */
+  display: inline-block;
   padding: 10px 20px;
+  width: 100%;
+  text-align: center;
   color: #00e2b9;
   font-size: 16px;
   text-decoration: none;
@@ -206,13 +239,10 @@ export default {
   overflow: hidden;
   transition: .5s;
   margin-top: 40px;
-  letter-spacing: 4px;
-  display: flex;
-  align-items:center;
-  justify-content:center;
+  letter-spacing: 4px
 }
 
-.login-box button:hover {
+.login-box a:hover {
   background: #00e2b9;
   color: #000;
   border-radius: 5px;
@@ -222,12 +252,12 @@ export default {
               0 0 100px #00ba98d1;
 }
 
-.login-box button span {
+.login-box a span {
   position: absolute;
   display: block;
 }
 
-.login-box button span:nth-child(1) {
+.login-box a span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -245,7 +275,7 @@ export default {
   }
 }
 
-.login-box button span:nth-child(2) {
+.login-box a span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -264,7 +294,7 @@ export default {
   }
 }
 
-.login-box button span:nth-child(3) {
+.login-box a span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -283,7 +313,7 @@ export default {
   }
 }
 
-.login-box button span:nth-child(4) {
+.login-box a span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

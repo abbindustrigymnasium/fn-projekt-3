@@ -18,9 +18,9 @@
           />
         </div>
 
-        <q-toolbar-title class="col text-center">
-          Ocean Data Project
-        </q-toolbar-title>
+        <div class="col text-center">
+          <router-link to="/" class="headHome" tag="button">Ocean Data Project</router-link>
+        </div>
 
         <div class="loginSignup col text-right column">
           <!-- <input
@@ -28,13 +28,13 @@
             class="bg-transparent navSearch"
             placeholder="  search . . ."
           /> -->
-          <router-link to="/login" class="loginButton" tag="button"  target="_blank">Log In</router-link>
-          <router-link to="/signup" class="signupButton" tag="button"  target="_blank">Sign up</router-link>
+          <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
+          <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="">
+    <q-drawer v-model="leftDrawerOpen" show-if-below bordered style="background: #2f415b; color:white;">
       <q-list>
         <q-item-label header
           ><div style="height: 3vh; width: 100%"></div
@@ -46,6 +46,15 @@
           v-bind="link"
           style=""
         />
+        <div class="EL_loginSignup col column">
+          <!-- <input
+            type="text"
+            class="bg-transparent navSearch"
+            placeholder="  search . . ."
+          /> -->
+          <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
+          <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
+        </div>
       </q-list>
     </q-drawer>
 
@@ -191,15 +200,114 @@ input {
   text-decoration: none;
   border-radius: 0.25rem;
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+  transition: 400ms;
 }
 
+.loginSignup .loginButton:hover {
+  background-color: #00e2b9;
+  color: #000;
+  box-shadow: 0 0 2px #00ba98d1,
+              0 0 10px #00ba98d1,
+              0 0 25px #00ba98d1,
+              0 0 50px #00ba98d1;
+  
+}
+
+
 .loginSignup .signupButton {
-  color: white;
+  color: #fff;
   padding-inline: 1rem;
   padding-block: 0.6rem;
   text-decoration: none;
   border-radius: 0.25rem;
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+  transition: 400ms;
+  margin-left: 1rem;
+}
+
+.loginSignup .signupButton:hover {
+  color: #ffa442;
+  text-shadow: 0 0 2px #c46f00d1,
+              0 0 10px #c46f00d1,
+              0 0 25px #c46f00d1,
+              0 0 50px #c46f00d1;
+}
+
+.headHome {
+  font-size: 22px;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+@media screen and (max-aspect-ratio: 3/4) {
+  .loginSignup {
+  display: none;
+}
+
+.headHome {
+  font-size: 16px;
+  text-align: right;
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row-reverse;
+ 
+}
+
+.EL_loginSignup {
+  display: none;
+}
+
+}
+
+.EL_loginSignup {
+  padding: 1rem;
+  display: inline;
+  text-transform: uppercase;
+  font-weight:normal;
+  outline: solid 2px white;
+}
+
+.EL_loginSignup .loginButton {
+  color: #00e2b9;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+  transition: 400ms;
+}
+
+.EL_loginSignup .loginButton:hover {
+  background-color: #00e2b9;
+  color: #000;
+  box-shadow: 0 0 2px #00ba98d1,
+              0 0 10px #00ba98d1,
+              0 0 25px #00ba98d1,
+              0 0 50px #00ba98d1;
+  
+}
+
+
+.EL_loginSignup .signupButton {
+  color: #fff;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-shadow: 0 0 8px rgba(0, 5, 17, 1);
+  transition: 400ms;
+  margin-left: 1rem;
+}
+
+.EL_loginSignup .signupButton:hover {
+  color: #ffa442;
+  text-shadow: 0 0 2px #c46f00d1,
+              0 0 10px #c46f00d1,
+              0 0 25px #c46f00d1,
+              0 0 50px #c46f00d1;
 }
 
 

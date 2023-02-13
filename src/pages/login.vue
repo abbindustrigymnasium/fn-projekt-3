@@ -115,6 +115,18 @@ export default {
   .login-box {
     width: 90vw;
   }
+
+  .login-box form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
+
+  .login-box form a {
+    font-size: 6px;
+  }
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
