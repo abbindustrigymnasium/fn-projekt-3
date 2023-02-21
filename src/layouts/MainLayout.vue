@@ -1,41 +1,37 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <div
-      style=" height: 55px; width: 100%; z-index: 100"
+      style="width: 100%; z-index: 100"
       class="navBackdrop"
     ></div>
     <q-header elevated class="bg-transparent text-white z-max fixed navBar" style="height: 0;">
       <q-toolbar>
-        <div class="col">
+        <div class="col menuButtonDiv">
           
-          <!-- <q-btn
+          <q-btn
             flat
             dense
             round
-            icon="menu"
+            label="OCEAN DATA PROJECT"
             aria-label="Menu"
             @click="toggleLeftDrawer"
-            class="float-left"
-          /> -->
+            class="float-left menuButton"
+            style="font-size: 16px; letter-spacing: 10px; text-decoration: none; color: #fff;"
+            />
         </div>
 
         <div class="col text-center">
           <router-link to="/" class="headHome" tag="button">OCEAN DATA PROJECT</router-link>
         </div>
 
-        <div class="loginSignup col text-right column">
-          <!-- <input
-            type="text"
-            class="bg-transparent navSearch"
-            placeholder="  search . . ."
-          /> -->
+        <div class="col loginSignup text-right column">
           <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
           <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
         </div>
       </q-toolbar>
     </q-header>
 
-    <!-- <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-9 text-white EL">
+    <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-9 text-white EL menuButton">
        <div class="col text-center">
           <router-link to="/" class="headHome" tag="button">Ocean Data Project</router-link>
         </div>
@@ -53,16 +49,11 @@
           style="height: 4rem; width: 100%; border-bottom: 1.5px solid rgba(255,255,255,0.4);"
         />
         <div class="EL_loginSignup col column">
-          <input
-            type="text"
-            class="bg-transparent navSearch"
-            placeholder="  search . . ."
-          />
           <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
           <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
         </div>
       </q-list>
-    </q-drawer> -->
+    </q-drawer>
 
     <q-page-container>
       <router-view />
@@ -75,19 +66,19 @@ import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
-    title: "Docs",
+    title: "HOME",
     caption: "quasar.dev",
     icon: "school",
     link: "https://quasar.dev",
   },
   {
-    title: "Github",
+    title: "LOG IN",
     caption: "github.com/quasarframework",
     icon: "code",
     link: "https://github.com/quasarframework",
   },
   {
-    title: "Quasar Awesome",
+    title: "SIGN UP",
     caption: "Community Quasar projects",
     icon: "favorite",
     link: "https://awesome.quasar.dev",
@@ -127,6 +118,7 @@ export default defineComponent({
     rgba(16, 24, 39, 0.3) 25%,
     rgba(16, 24, 39, 0.3) 50%,
   );
+  height: 55px;
 }
 
 .navBar {
@@ -141,26 +133,6 @@ export default defineComponent({
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   /* box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5); */
   color: white;
-}
-
-.navSearch {
-  /* background: none; */
-  outline: 2px white;
-  border: none;
-  border-bottom: solid 1.5px;
-  border-color: rgba(255, 255, 255, 0.25);
-  color: white;
-  height: 100%;
-}
-
-.navSearch :focus {
-  background-color: white;
-  outline: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 2px;
-  border-color: white;
 }
 
 input {
@@ -188,6 +160,7 @@ input {
 :-ms-input-placeholder {
   color: #fff;
 }
+
 .EL_loginSignup,
 .loginSignup {
   padding: 1rem;
@@ -245,26 +218,42 @@ input {
   color: #fff;
 }
 
-
-@media screen and (max-aspect-ratio: 3/4) {
-  .loginSignup {
+.menuButton {
   display: none;
 }
 
-.headHome {
-  font-size: 16px;
-  text-align: left;
-}
+@media screen and (max-aspect-ratio: 1/1) {
+  .loginSignup {
+  display: none;
+  }
 
-.navBar {
-  display: flex;
-  flex-direction: row-reverse;
- 
-}
+  .headHome {
+    font-size: 16px;
+    text-align: left;
+  }
 
-.EL .headHome {
-  margin-top: 4rem;
-}
+  .navBar {
+    display: flex;
+    flex-direction: row-reverse;
+  
+  }
 
+  .EL .headHome {
+    margin-top: 4rem;
+  }
+
+  .menuButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menuButtonDiv {
+    display: block;
+  }
+
+  .headHome {
+    display: none;
+  }
 }
 </style>
