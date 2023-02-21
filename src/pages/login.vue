@@ -125,7 +125,8 @@ export default {
 }
 
   .login-box form a {
-    font-size: 6px;
+    font-size: 10px;
+    text-align: center;
   }
 }
 @media screen and (min-aspect-ratio: 3/4) {
@@ -152,6 +153,10 @@ export default {
     width: 400px;
   }
 
+  .login-box form a {
+    font-size: 11px;
+    text-align: center;
+  }
 }
 .login-box {
   position: absolute;
@@ -232,10 +237,6 @@ export default {
   letter-spacing: 4px;
   background: none;
   border: none;
-}
-
-.login-box form a {
-  font-size: 11px;
 }
 
 .login-box a:hover,
