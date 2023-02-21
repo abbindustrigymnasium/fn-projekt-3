@@ -4,7 +4,7 @@
     <div class="cover parallax has-dark-cover">
       <div class="cover__logo">
         <router-link to="/Fish"><img class="SelectSvg" href="" src="..\assets\blackfishylogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="fhisyman" /></router-link>
-        <router-link to="/Oceon"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" /></router-link>
+        <router-link to="/Ocean"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" /></router-link>
       </div>
       <div class="parallax__container">
         <video src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" autoplay="" muted="" loop=""
@@ -180,6 +180,7 @@ html {
 
 .footerlink {
   display: flex;
+  overflow-x: hidden;
   justify-content: space-evenly;
   font-size: 25px;
   color: #D3D3D3;
@@ -2556,7 +2557,8 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 #js-view {
   position: relative;
-  z-index: 3
+  z-index: 3;
+  overflow-x: hidden;
 }
 
 .box,
