@@ -40,8 +40,6 @@ import axios from 'axios'
 import { ref } from 'vue'
 const email = ref("")
 const password = ref("")
-
-
 const findUser = async () => {
   try {
     const api = await axios.post('http://localhost:3000/auth', { email: email.value, password: password.value })
@@ -53,6 +51,8 @@ const findUser = async () => {
       password: api.data.password,
       id: api.data.id
     }));
+    const event = new CustomEvent('userLoggedIn')
+    window.dispatchEvent(event) // dispatch the event
     console.log("user saved to local storage")
 
   } catch (error) {
