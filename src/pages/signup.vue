@@ -1,20 +1,20 @@
 <template>
-  <q-page class="flex flex-center">
+  <q-page class="flex flex-center" style="width: 100%;">
     <section id="header" style="width: 100%; top: 0; ">
       <div class="overlay"></div>
         <video poster="oceanVideo.mp4" autoplay loop muted>
-          <source type="video/mp4" src="oceanVideo.mp4" />
+          <source type="video/mp4" src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" />
         </video>
 
         <div class="login-box">
-          <h2>Sign up</h2>
+          <h2> S I G N &zwnj; U P </h2>
           <form>
             <div class="user-box">
               <input type="text" v-model="name">
               <label>Name</label>
             </div>
             <div class="user-box">
-              <input type="text" v-model="email">
+              <input type="text" name="" required="">
               <label>Email</label>
             </div>
             <div class="user-box">
@@ -74,16 +74,6 @@ const addUser = async () => {
   height: 100vh;
 }
 
-.titleHeader {
-  color: white;
-  z-index: 5;
-  display: block;
-  /* justify-content: center; */
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  background-image: url("C: \Users\21lucbih\Desktop\MainFish\fn-projekt-3\public\logosfishoceon.png");
-}
 .main-page {
   height: 100vh;
   width: 100%;
@@ -96,13 +86,6 @@ const addUser = async () => {
   position: relative;
 }
 
-#header-image {
-  background-image: url("https://s27363.pcdn.co/wp-content/uploads/2020/05/Santorini-Sunset.jpg.optimal.jpg");
-  width: 100vw;
-  min-height: 100vh;
-  background-size: cover;
-  position: fixed;
-}
 .overlay {
   position: absolute;
   top: 0;
@@ -130,6 +113,19 @@ const addUser = async () => {
     width: auto;
     height: 100%;
   }
+
+
+  .login-box {
+    width: 90vw;
+  }
+
+  .login-box form button {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  background: none;
+  border: none;
+}
 }
 @media screen and (min-aspect-ratio: 3/4) {
   body {
@@ -151,17 +147,20 @@ const addUser = async () => {
   height: 100%;
   }
 
+  .login-box {
+  width: 400px;
+  }
+
 }
 .login-box {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 400px;
   padding: 4vh;
   transform: translate(-50%, -50%);
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.95);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow: 0 15px 25px rgba(0,0,0,.9);
   border-radius: 10px;
   z-index: 10;
 }
@@ -212,6 +211,8 @@ const addUser = async () => {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
+  width: 100%;
+  text-align: center;
   color: #00e2b9;
   font-size: 16px;
   text-decoration: none;
@@ -243,7 +244,7 @@ const addUser = async () => {
   width: 100%;
   height: 2px;
   background: linear-gradient(90deg, transparent, #00e2b9);
-  animation: btn-anim1 1s linear infinite;
+  animation: btn-anim1 2s linear infinite;
 }
 
 @keyframes btn-anim1 {
@@ -261,8 +262,8 @@ const addUser = async () => {
   width: 2px;
   height: 100%;
   background: linear-gradient(180deg, transparent, #00e2b9);
-  animation: btn-anim2 1s linear infinite;
-  animation-delay: .25s
+  animation: btn-anim2 2s linear infinite;
+  animation-delay: .5s
 }
 
 @keyframes btn-anim2 {
@@ -280,8 +281,8 @@ const addUser = async () => {
   width: 100%;
   height: 2px;
   background: linear-gradient(270deg, transparent, #00e2b9);
-  animation: btn-anim3 1s linear infinite;
-  animation-delay: .5s
+  animation: btn-anim3 2s linear infinite;
+  animation-delay: 1s
 }
 
 @keyframes btn-anim3 {
@@ -299,8 +300,8 @@ const addUser = async () => {
   width: 2px;
   height: 100%;
   background: linear-gradient(360deg, transparent, #00e2b9);
-  animation: btn-anim4 1s linear infinite;
-  animation-delay: .75s
+  animation: btn-anim4 2s linear infinite;
+  animation-delay: 1.5s
 }
 
 @keyframes btn-anim4 {
