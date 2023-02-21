@@ -3,8 +3,13 @@
   <div class="page">
     <div class="cover parallax has-dark-cover">
       <div class="cover__logo">
+<<<<<<< HEAD
         <img src="..\assets\Fish.svg" alt="Kiwi standing on oval" />
         <img src="..\assets\Oceaon.svg" alt="Kiwi standing on oval" />
+=======
+        <router-link to="/Fish"><img class="SelectSvg" href="" src="..\assets\blackfishylogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="fhisyman" /></router-link>
+        <router-link to="/Ocean"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="-webkit-filter: invert(100%); filter: invert(100%); max-width: 400px;" alt="waterthing" /></router-link>
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
       </div>
       <div class="parallax__container">
         <video src="https://github.com/abbguslof/MazeGame/raw/main/images/VideoForFn.mp4" autoplay="" muted="" loop=""
@@ -30,6 +35,7 @@
       </div>
       <div class="box project project--duo">
         <div class="project__images">
+<<<<<<< HEAD
 
           <div class="project__image project__image--l">
             <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
@@ -38,6 +44,13 @@
 
 
             <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+=======
+          <div class="project__image project__image--l">
+            <img src="..\assets\happyfish.jpg">
+          </div>
+          <div class="project__image project__image--r project__image--parallax">
+            <img src="..\assets\mosthappyfish.jpg">
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
           </div>
         </div>
 
@@ -68,7 +81,11 @@
 
           <div class="project__image project__image--l" style="color:#deeaf4">
 
+<<<<<<< HEAD
             <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+=======
+            <img src="..\assets\coderman.jpg">
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 
           </div>
 
@@ -84,7 +101,11 @@
       </div>
       <div class="project project--full">
 
+<<<<<<< HEAD
         <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+=======
+        <img src="..\assets\coderfish.png">
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
       </div>
       <div class="projects bricks">
 
@@ -100,15 +121,24 @@
 
           <div class="project__image project__image--l item" style="color:#F6F6F6">
 
+<<<<<<< HEAD
             <a href="http://missesandmisters.com/de/home/hand-dyed-ombre-bag-19306.html"><img
                 src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg"></a>
+=======
+            <a href="https://github.com/abbindustrigymnasium/fn-projekt-3/tree/main"><img
+                src="..\assets\Code.jpg"></a>
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 
           </div>
 
           <div class="project__caption">
             <h2>en blick in i källkoden!</h2>
             <p><a class="footer-address"
+<<<<<<< HEAD
                 href="http://missesandmisters.com/de/home/hand-dyed-ombre-bag-19306.html"><u>View now</u></a></p>
+=======
+                href="https://github.com/abbindustrigymnasium/fn-projekt-3/tree/main"><u>View now</u></a></p>
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 
           </div>
         </div>
@@ -138,6 +168,7 @@
   </div> <!--  .page -->
 </div> <!--  #js-view -->
 
+<<<<<<< HEAD
 <div class="home-footer">
 
 
@@ -145,6 +176,16 @@
   <div class="footer-address" style="text-align:center; font-size:16px;">
     <p><a href="http://www.save-the-ocean.com/www.missesandmisters.com">bpiasdno </a> <a
         href="mailto:hi@missesandmisters.com">cool@kaimsd.gmail.com.hmail.hotmail</a> </p>
+=======
+<div class="footer">
+  <p> -  Årkrus 2 Spets Grupp 3 bla bla  - </p>
+  <div class="footerlink">
+    <a class="hoverlinkfooter" href="https://twitter.com/BarackObama"> https://twitter.com/BarackObama </a>
+    <a class="hoverlinkfooter" href="MyBestAndFavouriteEmail@EmialServiceHotmail.com"> MyBestAndFavouriteEmail@EmialServiceHotmail.com </a>
+    <a class="hoverlinkfooter" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> https://www.youtube.com/watch?v=dQw4w9WgXcQ </a>
+    <a class="hoverlinkfooter" href="https://nokflex.nok.se/"> https://nokflex.nok.se/ </a>
+    <a class="hoverlinkfooter" href="https://github.com/abbjetmus/FN-projekt"> https://github.com/abbjetmus/FN-projekt </a>
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
   </div>
 </div>
 </template>
@@ -167,6 +208,34 @@ html {
 :before {
   box-sizing: inherit
 }
+<<<<<<< HEAD
+=======
+.footer {
+  position: relative;
+  font-size: 45px;
+  z-index: 100;
+  color: black;
+  background-color: rgba(255, 255, 255, .45);
+  font-weight: 1000;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.footerlink {
+  display: flex;
+  overflow-x: hidden;
+  justify-content: space-evenly;
+  font-size: 25px;
+  color: #D3D3D3;
+}
+.hoverlinkfooter:hover {
+  color: #0000EE;
+  text-decoration: underline;
+  transform: scaleX(1.1) scaleY(1.1);
+}
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 
 html {
   font-family: sans-serif;
@@ -278,6 +347,15 @@ img {
 svg:not(:root) {
   overflow: hidden
 }
+<<<<<<< HEAD
+=======
+.SelectSvg:hover{
+  transition-duration: 0.25s;
+  transform: scaleX(1.075) scaleY(1.075);
+  filter: invert(100%);
+  cursor: pointer;
+}
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 
 code,
 kbd,
@@ -1387,6 +1465,13 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 .cover .cover__logo {
   position: fixed;
+<<<<<<< HEAD
+=======
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 7%;
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
   top: 50%;
   left: 50%;
   transform: translate(-50%);
@@ -1550,6 +1635,7 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
   margin: 1em 0
 }
 
+<<<<<<< HEAD
 .footer-mailchimp {
   width: 23.6096vw;
   height: 2.7776vw;
@@ -1750,6 +1836,11 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
     font-size: 10px;
     float: none
   }
+=======
+.home-footer {
+  padding: 1.3888vw 16vw;
+  font-family: garamond-premier-pro-display, serif;
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 }
 
 .is-home .arrow--left {
@@ -1919,7 +2010,11 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 .projects .project__image img {
   transform: scaleX(1) translateZ(0);
+<<<<<<< HEAD
   transition: transform 3s ease
+=======
+  transition: transform 3000s ease
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 }
 
 .projects .project__image.project__image--bg img {
@@ -2047,8 +2142,13 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .project--duo:hover .project__image--l img {
+<<<<<<< HEAD
   transform: scale(1.1);
   transition: transform 3s ease
+=======
+  transform: scale(1000.1);
+  transition: transform 1000s ease
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 }
 
 .project--duo .project__image {
@@ -2721,7 +2821,12 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 #js-view {
   position: relative;
+<<<<<<< HEAD
   z-index: 3
+=======
+  z-index: 3;
+  overflow-x: hidden;
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 }
 
 .box,
@@ -3083,9 +3188,15 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .item:hover img {
+<<<<<<< HEAD
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+=======
+  -moz-transform: scale(1000.1);
+  -webkit-transform: scale(1000.1);
+  transform: scale(1000.1);
+>>>>>>> c1b8a26fe910ec4a0c659ed8adf6416b94de6b6c
 }
 
 @media (orientation: portrait) {
