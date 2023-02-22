@@ -18,6 +18,7 @@
             class="float-left menuButton"
             style="font-size: 16px; letter-spacing: 10px; text-decoration: none; color: #fff; padding-block: 0.5rem;"
             />
+          <router-link to="/donate" class="donateButton" tag="button" >Donate</router-link>
         </div>
 
         <div class="col text-center">
@@ -211,6 +212,7 @@ input {
   transition: 400ms;
 }
 
+.donateButton,
 .loginSignup .loginButton {
   color: #00e2b9;
   padding-inline: 1rem;
@@ -220,6 +222,14 @@ input {
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
   transition: 400ms;
 }
+
+.donateButton {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.donateButton:hover,
 .loginSignup .loginButton:hover {
   background-color: #00e2b9;
   color: #000;
@@ -296,5 +306,9 @@ input {
   .headHome {
     display: none;
   }
+
+  .donateButton {
+  display: none;
+}
 }
 </style>
