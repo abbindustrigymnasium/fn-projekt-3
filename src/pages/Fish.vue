@@ -14,7 +14,12 @@
           </div> -->
           
           <div class="post">
-            <h3>Lorem, ipsum.</h3>
+            <!-- HEADER -->
+            <div style="display: flex; justify-content: space-between;">
+                <h3 >Lorem, ipsum.</h3>
+                <button><img src="https://cdn-icons-png.flaticon.com/512/1160/1160705.png" style="width: 100%;"></button>
+            </div>
+            <!-- CONTENT -->
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maiores!</h6>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis impedit harum officia corrupti hic consectetur, dolore eligendi atque reprehenderit, iste unde dolorem veritatis cum laboriosam!</p>
             <img src="S-T-O-ocean.jpg" style="width: 100%; object-fit: cover;">
@@ -26,7 +31,12 @@
           <!-- MER POSTS -->
         
           <div class="post">
-            <h3>Lorem, ipsum.</h3>
+            <!-- HEADER -->
+            <div style="display: flex; justify-content: space-between;">
+                <h3 >Lorem, ipsum.</h3>
+                <button><img src="https://cdn-icons-png.flaticon.com/512/1160/1160705.png" style="width: 100%;"></button>
+            </div>
+            <!-- CONTENT -->
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maiores!</h6>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis impedit harum officia corrupti hic consectetur, dolore eligendi atque reprehenderit, iste unde dolorem veritatis cum laboriosam!</p>
             <img src="S-T-O-ocean.jpg" style="width: 100%; object-fit: cover;">
@@ -119,6 +129,22 @@ export default defineComponent({
 
   .post h3 {
     margin-block: 0;
+  }
+
+  .post button {
+    background-color: white; 
+    outline: solid 2px #00e2b9;
+    border: none; 
+    border-radius: 0.25rem; 
+    box-shadow: 0 0 12px 0 rgba(0,0,0,0.2); 
+    padding: 0.5rem; 
+    width: 3rem;
+    transition: 200ms;
+  }
+
+  .post button:hover {
+    outline: solid 2px rgb(235, 235, 235);
+    background-color: rgb(235, 235, 235); 
   }
 
   .postWindow hr {

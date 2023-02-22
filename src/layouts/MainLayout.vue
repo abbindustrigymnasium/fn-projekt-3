@@ -25,6 +25,7 @@
         </div>
 
         <div class="col loginSignup text-right column">
+          <router-link to="/bookmark" class="signupButton" tag="button" >Bookmarks</router-link>
           <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
           <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
         </div>
@@ -45,11 +46,13 @@
           style="height: 4rem; width: 100%; border-bottom: 1.5px solid rgba(255,255,255,0.4);"
         /> -->
         <div class="EL_loginSignup col column w-full">
-          <router-link to="/" class="homeButton col text-blue-grey-9" tag="button" >Home</router-link>
+          <router-link to="/" class="navButton col text-blue-grey-9" tag="button" >Home</router-link>
           <hr>
-          <router-link to="/login" class="loginButton col text-blue-grey-9" tag="button" >Log In</router-link>
+          <router-link to="/login" class="navButton col text-blue-grey-9" tag="button" >Log In</router-link>
           <hr>
-          <router-link to="/signup" class="signupButton col text-blue-grey-9" tag="button" >Sign up</router-link>
+          <router-link to="/signup" class="navButton col text-blue-grey-9" tag="button" >Sign up</router-link>
+          <hr>
+          <router-link to="/bookmark" class="navButton col text-blue-grey-9" tag="button" >Bookmarks</router-link>
           <br>
           <br>
           <hr>
@@ -57,6 +60,8 @@
           <router-link to="/Fish" class="oceanButton col text-blue-grey-9"><img class="SelectSvg" href="" src="..\assets\blackfishylogo.svg" style="width: 100%;"/></router-link>
           <br><hr><br>
           <router-link to="/Ocean" class="oceanButton col text-blue-grey-9"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="width: 100%;" /></router-link>
+          <hr>
+          <router-link to="/donate" class="navButton col text-blue-grey-9" tag="button" >Donate</router-link>
         </div>
       </q-list>
     </q-drawer>
@@ -192,9 +197,7 @@ input {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.EL_loginSignup .homeButton,
-.EL_loginSignup .loginButton,
-.EL_loginSignup .signupButton,
+.EL_loginSignup .navButton,
 .EL_loginSignup .fishButton,
 .EL_loginSignup .oceanButton{
   display: block;
@@ -235,7 +238,6 @@ input {
   border-radius: 0.25rem;
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
   transition: 400ms;
-  margin-left: 1rem;
 }
 
 .loginSignup .signupButton:hover {
