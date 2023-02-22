@@ -154,6 +154,10 @@ const findUser = async () => {
     width: 400px;
   }
 
+  .login-box form a {
+    font-size: 11px;
+    text-align: center;
+  }
 }
 .login-box {
   position: absolute;
