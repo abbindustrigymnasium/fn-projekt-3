@@ -10,7 +10,7 @@
           <h2> S I G N &zwnj; U P </h2>
           <form>
             <div class="user-box">
-              <input type="text" v-model="name">
+              <input type="text" v-model="name" required="">
               <label>Name</label>
             </div>
             <div class="user-box">
@@ -18,7 +18,7 @@
               <label>Email</label>
             </div>
             <div class="user-box">
-              <input type="password" v-model="password">
+              <input type="password" v-model="password" required="">
               <label>Password</label>
             </div>
             <a @click="addUser" class="cursor-pointer">

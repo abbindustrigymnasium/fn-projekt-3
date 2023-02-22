@@ -10,11 +10,11 @@
           <h2> L O G I N </h2>
           <form>
             <div class="user-box">
-              <input type="text" v-model="email">
+              <input type="text" v-model="email" required="">
               <label>Email</label>
             </div>
             <div class="user-box">
-              <input type="password" v-model="password">
+              <input type="password" v-model="password" required="">
               <label>Password</label>
             </div>
             <div class="buttonRow">
