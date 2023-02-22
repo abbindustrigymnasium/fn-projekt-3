@@ -8,11 +8,15 @@
 
         <div class="postWindow">
         <!-- POST -->
+
+          <!-- <div class="post">
+            <h3 class="text-center"> F I S H E S</h3>
+          </div> -->
+          
           <div class="post">
             <h3>Lorem, ipsum.</h3>
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maiores!</h6>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, culpa sint similique nesciunt aspernatur magnam voluptas dolore numquam rem quos, perferendis nostrum vitae voluptate nulla sequi animi voluptatibus mollitia? Ex est, recusandae magnam at placeat praesentium vel quibusdam. Quis beatae optio aliquid tempora, facere debitis porro cum, recusandae, delectus sequi alias voluptatibus blanditiis. 
-                <br><br>Quam tempora obcaecati eveniet quibusdam. Nobis officiis reiciendis aliquam laboriosam, laudantium, non at sint, perferendis iure numquam adipisci dolorum natus rem necessitatibus dicta error doloremque incidunt? Sed aliquid molestias quidem explicabo impedit dignissimos in magni tempora voluptates provident rem consectetur natus pariatur iusto omnis perferendis, rerum atque.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis impedit harum officia corrupti hic consectetur, dolore eligendi atque reprehenderit, iste unde dolorem veritatis cum laboriosam!</p>
             <img src="S-T-O-ocean.jpg" style="width: 100%; object-fit: cover;">
           </div>
 
@@ -24,8 +28,7 @@
           <div class="post">
             <h3>Lorem, ipsum.</h3>
             <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, maiores!</h6>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, culpa sint similique nesciunt aspernatur magnam voluptas dolore numquam rem quos, perferendis nostrum vitae voluptate nulla sequi animi voluptatibus mollitia? Ex est, recusandae magnam at placeat praesentium vel quibusdam. Quis beatae optio aliquid tempora, facere debitis porro cum, recusandae, delectus sequi alias voluptatibus blanditiis. 
-                <br><br>Quam tempora obcaecati eveniet quibusdam. Nobis officiis reiciendis aliquam laboriosam, laudantium, non at sint, perferendis iure numquam adipisci dolorum natus rem necessitatibus dicta error doloremque incidunt? Sed aliquid molestias quidem explicabo impedit dignissimos in magni tempora voluptates provident rem consectetur natus pariatur iusto omnis perferendis, rerum atque.</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis impedit harum officia corrupti hic consectetur, dolore eligendi atque reprehenderit, iste unde dolorem veritatis cum laboriosam!</p>
             <img src="S-T-O-ocean.jpg" style="width: 100%; object-fit: cover;">
           </div>
         </div>
@@ -87,6 +90,8 @@ export default defineComponent({
 }
 
 .postWindow {
+    display: flex;
+    gap: 1rem;
     margin-inline: auto;
     background-color: rgba(255,255,255, 0.75);
     outline: solid 2px #00e2b9;
@@ -104,7 +109,7 @@ export default defineComponent({
     background-color: rgba(255,255,255);
     outline: solid 2px #00e2b9;
     border-radius: .25rem;
-    width: 100%;
+    width: 50%;
     position: relative;
     z-index: 10;
     margin-bottom: 1.5rem;
@@ -139,6 +144,20 @@ export default defineComponent({
 
   .post {
     padding: 2rem;
+  }
+}
+
+
+@media screen and (max-aspect-ratio: 5/4) {
+
+  .postWindow {
+    padding: 0;
+    display: block;
+  }
+
+  .post {
+    padding: 2rem;
+    width: 100%;
   }
 }
 
