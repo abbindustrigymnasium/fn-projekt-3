@@ -5,7 +5,7 @@
       class="navBackdrop"
     ></div>
     <q-header elevated class="bg-transparent text-white z-max fixed navBar" style="height: 0;">
-      <q-toolbar>
+      <q-toolbar class="toolBar">
         <div class="col menuButtonDiv">
           
           <q-btn
@@ -16,7 +16,7 @@
             aria-label="Menu"
             @click="toggleLeftDrawer"
             class="float-left menuButton"
-            style="font-size: 16px; letter-spacing: 10px; text-decoration: none; color: #fff;"
+            style="font-size: 16px; letter-spacing: 10px; text-decoration: none; color: #fff; padding-block: 0.5rem;"
             />
         </div>
 
@@ -31,26 +31,32 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-9 text-white EL menuButton">
-       <div class="col text-center">
-          <router-link to="/" class="headHome" tag="button">Ocean Data Project</router-link>
-        </div>
-      
-      <q-list>
+    <q-drawer v-model="leftDrawerOpen" show-if-below bordered class="bg-blue-grey-2 text-blue-grey-9 EL">
+      <q-list class="block">
 
         <q-item-label header
           ><div style="height: 2vh; width: 100%"></div
         ></q-item-label>
 
-        <EssentialLink
+        <!-- <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
           style="height: 4rem; width: 100%; border-bottom: 1.5px solid rgba(255,255,255,0.4);"
-        />
-        <div class="EL_loginSignup col column">
-          <router-link to="/login" class="loginButton" tag="button" >Log In</router-link>
-          <router-link to="/signup" class="signupButton" tag="button" >Sign up</router-link>
+        /> -->
+        <div class="EL_loginSignup col column w-full">
+          <router-link to="/" class="homeButton col text-blue-grey-9" tag="button" >Home</router-link>
+          <hr>
+          <router-link to="/login" class="loginButton col text-blue-grey-9" tag="button" >Log In</router-link>
+          <hr>
+          <router-link to="/signup" class="signupButton col text-blue-grey-9" tag="button" >Sign up</router-link>
+          <br>
+          <br>
+          <hr>
+          <br>
+          <router-link to="/Fish" class="oceanButton col text-blue-grey-9"><img class="SelectSvg" href="" src="..\assets\blackfishylogo.svg" style="width: 100%;"/></router-link>
+          <br><hr><br>
+          <router-link to="/Ocean" class="oceanButton col text-blue-grey-9"><img class="SelectSvg" href="" src="..\assets\blackoceqaonlgogo.svg" style="width: 100%;" /></router-link>
         </div>
       </q-list>
     </q-drawer>
@@ -118,7 +124,7 @@ export default defineComponent({
     rgba(16, 24, 39, 0.3) 25%,
     rgba(16, 24, 39, 0.3) 50%,
   );
-  height: 55px;
+  height:55px
 }
 
 .navBar {
@@ -161,15 +167,47 @@ input {
   color: #fff;
 }
 
-.EL_loginSignup,
 .loginSignup {
   padding: 1rem;
   display: inline-block;
   text-transform: uppercase;
-  font-weight:normal;
+  font-weight: normal;
 }
 
+.EL {
+  padding-inline: 1rem;
+}
+
+.EL_loginSignup {
+  padding-block: 1rem;
+  display: block;
+  text-transform: uppercase;
+  font-weight: normal;
+  width: 100%;
+}
+
+.EL_loginSignup hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.EL_loginSignup .homeButton,
 .EL_loginSignup .loginButton,
+.EL_loginSignup .signupButton,
+.EL_loginSignup .fishButton,
+.EL_loginSignup .oceanButton{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
+  text-decoration: none;
+  border-radius: 0.25rem;
+  text-shadow: 0 0 4px rgba(0, 5, 17, 0.4);
+  transition: 400ms;
+}
+
 .loginSignup .loginButton {
   color: #00e2b9;
   padding-inline: 1rem;
@@ -179,7 +217,6 @@ input {
   text-shadow: 0 0 8px rgba(0, 5, 17, 1);
   transition: 400ms;
 }
-.EL_loginSignup .loginButton:hover,
 .loginSignup .loginButton:hover {
   background-color: #00e2b9;
   color: #000;
@@ -190,7 +227,6 @@ input {
   
 }
 
-.EL_loginSignup .signupButton,
 .loginSignup .signupButton {
   color: #fff;
   padding-inline: 1rem;
@@ -202,7 +238,6 @@ input {
   margin-left: 1rem;
 }
 
-.EL_loginSignup .signupButton:hover,
 .loginSignup .signupButton:hover {
   color: #ffa442;
   text-shadow: 0 0 2px #c46f00d1,
@@ -235,8 +270,16 @@ input {
   .navBar {
     display: flex;
     flex-direction: row-reverse;
-  
   }
+
+  .navBackdrop {
+    height: 3rem
+  }
+
+   .toolBar {
+    display: block;
+  }
+
 
   .EL .headHome {
     margin-top: 4rem;
@@ -246,10 +289,6 @@ input {
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-
-  .menuButtonDiv {
-    display: block;
   }
 
   .headHome {
