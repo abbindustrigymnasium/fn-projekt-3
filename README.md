@@ -1,6 +1,1 @@
-# Quasar App (fnproject3)
-
-fn project for school
-
-## Very easy
-test very nice
+Här kommer länken till repositoryn som har slutversionen utav applicationen: https://github.com/abblucbih/fnproject-grupp3.git
